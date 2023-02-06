@@ -1,14 +1,11 @@
-import "./globals.css";
-
 import { Fira_Code } from "@next/font/google";
-import { log } from "console";
+
+import "./globals.css";
 
 const firacode = Fira_Code({
   subsets: ["latin"],
   weight: ["400", "500"],
 });
-
-log(process.env.API_KEY);
 
 export default function RootLayout({
   children,
@@ -23,16 +20,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={firacode.className}>
-        {/* <nav>
-          <h1>logo</h1>
-          <h2>Abount</h2>
-          <li>
-            <a href="#">about </a>
-          </li>
-        </nav> */}
-        {children}
-      </body>
+      <body className={firacode.className}>{children}</body>
     </html>
   );
 }
