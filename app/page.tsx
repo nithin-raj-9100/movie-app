@@ -14,15 +14,15 @@ export default async function Home() {
 
   const res = await data.json();
 
-  // console.log(res);
-
   return (
     <main
       className={`${firacode.className} h-screen w-screen overflow-x-hidden p-6 font-serif dark:bg-slate-900`}
     >
-      <h1 className="flex items-center justify-center p-6 text-6xl uppercase">
-        Moviezz
-      </h1>
+      <div className="flex items-center justify-center">
+        <h1 className="mb-6 rounded-3xl bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 px-10 py-4 text-6xl uppercase text-black">
+          Moviezz
+        </h1>
+      </div>
 
       <div className="grid grid-cols-fluid place-items-baseline gap-16 text-white ">
         {res.results.map((movie: any) => (
